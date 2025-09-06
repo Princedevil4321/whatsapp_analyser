@@ -207,7 +207,7 @@ if uploaded_file is not None:
         st.dataframe(active_streaks.to_frame(), use_container_width=True)
 
         st.subheader("Key Events")
-        st.dataframe(key_events.to_frame(), use_container_width=True)
+        st.dataframe(key_events, use_container_width=True)
 
         st.subheader("Peak Hours")
         st.dataframe(peak_hours.to_frame(), use_container_width=True)

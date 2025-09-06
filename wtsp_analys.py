@@ -203,6 +203,9 @@ if uploaded_file is not None:
         st.subheader("Average Time Between Messages")
         st.dataframe(avg_reply_time.to_frame(), use_container_width=True)
 
+        st.subheader("Active Streaks")
+        st.dataframe(active_streaks.to_frame(), use_container_width=True)
+
         st.subheader("Top 10 Emojis Used")
         emoji_df = pd.DataFrame(emoji_counts.most_common(10), columns=['Emoji', 'Count'])
         st.dataframe(emoji_df, use_container_width=True)

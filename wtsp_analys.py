@@ -83,7 +83,7 @@ def generate_ai_summary(data_dict):
     - Longest active streak: {data_dict['active_streaks_markdown']}
     """
     
-    apiKey = os.getenv("API_KEY")
+    apiKey = st.secrets["API_KEY"]
     apiUrl = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key={apiKey}"
 
     payload = {

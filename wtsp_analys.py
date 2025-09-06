@@ -206,6 +206,12 @@ if uploaded_file is not None:
         st.subheader("Active Streaks")
         st.dataframe(active_streaks.to_frame(), use_container_width=True)
 
+        st.subheader("Key Events")
+        st.dataframe(key_events.to_frame(), use_container_width=True)
+
+        st.subheader("Peak Hours")
+        st.dataframe(peak_hours.to_frame(), use_container_width=True)
+        
         st.subheader("Top 10 Emojis Used")
         emoji_df = pd.DataFrame(emoji_counts.most_common(10), columns=['Emoji', 'Count'])
         st.dataframe(emoji_df, use_container_width=True)

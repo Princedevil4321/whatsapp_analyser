@@ -6,3 +6,4 @@ emoji
 nltk
 requests
 python-dotenv
+tabulate

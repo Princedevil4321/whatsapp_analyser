@@ -1,4 +1,5 @@
 import re
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -82,7 +83,7 @@ def generate_ai_summary(data_dict):
     - Longest active streak: {data_dict['active_streaks_markdown']}
     """
     
-    apiKey = "AIzaSyBgOW5cUGSrPJ0XrTVThOdln2c_Ls5ibWE"
+    apiKey = st.secrets["API_KEY"]
     apiUrl = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key={apiKey}"
 
     payload = {

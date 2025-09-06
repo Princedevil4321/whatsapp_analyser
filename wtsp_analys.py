@@ -17,8 +17,6 @@ import streamlit as st
 # --- Initial Setup for NLTK ---
 try:
     nltk.data.find('sentiment/vader_lexicon.zip')
-except nltk.downloader.DownloadError:
-    nltk.download('vader_lexicon')
 except LookupError:
     nltk.download('vader_lexicon')
 except Exception as e:
@@ -27,8 +25,6 @@ except Exception as e:
 
 try:
     nltk.data.find('corpora/stopwords')
-except nltk.downloader.DownloadError:
-    nltk.download('stopwords')
 except LookupError:
     nltk.download('stopwords')
 except Exception as e:
